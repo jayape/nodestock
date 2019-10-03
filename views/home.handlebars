@@ -1,8 +1,35 @@
-<h1>{{ stock.companyName}} ({{ stock.symbol }})</h1>
+<div class="jumbotron">
+  <h1 class="display-4">{{ stock.companyName}} ({{ stock.symbol }})</h1>
+  <strong>Latest Price: ${{ stock.latestPrice }}</strong><br/>
+<strong>Previous Close: ${{ stock.previousClose }}</strong><br/>
+<strong>Percent Change: {{ stock.changePercent }}%</strong><br/>
+<strong>Change: ${{ stock.change }}</strong><br/>
+<strong>52 Week High: ${{ stock.week52High }}</strong><br/>
+<strong>52 Week Low: ${{ stock.week52Low }}</strong><br/>
+<strong>Year To Date Change: {{ stock.ytdChange }}%</strong><br/>
+<strong>P/E Ratio: {{ stock.peRatio }}</strong><br/>
 
-<br/><br/>
+
+</div>
+
+
+<!--
+<h1>{{ stock.companyName}} ({{ stock.symbol }})</h1>
+<br/>
+<strong>Latest Price: ${{ stock.latestPrice }}</strong><br/>
+<strong>Previous Close: ${{ stock.previousClose }}</strong><br/>
+<strong>Percent Change: {{ stock.changePercent }}%</strong><br/>
+<strong>Change: ${{ stock.change }}</strong><br/>
+<strong>52 Week High: ${{ stock.week52High }}</strong><br/>
+<strong>52 Week Low: ${{ stock.week52Low }}</strong><br/>
+<strong>Year To Date Change: {{ stock.ytdChange }}%</strong><br/>
+<strong>P/E Ratio: {{ stock.peRatio }}</strong><br/>
+
+
 
 <br/><br/>
 {{#each stock}}
 	{{@key}} | {{this}}<br/>
 {{/each}}
+
+-->
