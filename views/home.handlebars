@@ -1,19 +1,29 @@
 <div class="jumbotron">
-  <h1 class="display-4">{{ stock.companyName}} ({{ stock.symbol }})</h1>
-  <strong>Latest Price: ${{ stock.latestPrice }}</strong><br/>
-<strong>Previous Close: ${{ stock.previousClose }}</strong><br/>
-<strong>Percent Change: {{ stock.changePercent }}%</strong><br/>
-<strong>Change: ${{ stock.change }}</strong><br/>
-<strong>52 Week High: ${{ stock.week52High }}</strong><br/>
-<strong>52 Week Low: ${{ stock.week52Low }}</strong><br/>
-<strong>Year To Date Change: {{ stock.ytdChange }}%</strong><br/>
-<strong>P/E Ratio: {{ stock.peRatio }}</strong><br/>
+ 	<h1 class="display-4">{{ stock.companyName}} ({{ stock.symbol }})</h1>
 
+ 	<br/><h2>Year Data</h2><br/>
+	<strong>52 Week High: ${{ stock.week52high }}</strong><br/>
+	<strong>52 Week Low: ${{ stock.week52low }}</strong><br/>
+	<strong>Percentage Change: {{ stock.week52change }}%</strong><br/>
+	
+	<br/><h2>Moving Averages</h2><br/>
+	<strong>200 Day Moving Average: ${{ stock.day200MovingAvg }}</strong><br/>
+	<strong>50 Day Moving Average: {{ stock.day50MovingAverage }}%</strong><br/>
 
+	<br/><h2>Financials</h2><br/>	
+	<strong>Earnings Per Share: {{ stock.ttmEPS }}</strong><br/>
+	<strong>P/E Ratio: {{ stock.peRatio }}</strong><br/>
+
+	<br/><h2>Dividends</h2><br/>	
+	<strong>Ex Dividend Date: {{ stock.exDividendDate }}</strong><br/>
+	<strong>Next Dividend Date: {{ stock.nextDividendDate }}</strong><br/>
+	<strong>Dividend Yield: {{ stock.dividendYield }}%</strong><br/>
+	<strong>Dividend Rate: {{ stock.ttmDividendRate }}</strong><br/>
+	<strong>Next Earnings Date: {{ stock.nextEarningsDate }}</strong><br/>
 </div>
 
+  <!--
 
-<!--
 <h1>{{ stock.companyName}} ({{ stock.symbol }})</h1>
 <br/>
 <strong>Latest Price: ${{ stock.latestPrice }}</strong><br/>
@@ -24,7 +34,6 @@
 <strong>52 Week Low: ${{ stock.week52Low }}</strong><br/>
 <strong>Year To Date Change: {{ stock.ytdChange }}%</strong><br/>
 <strong>P/E Ratio: {{ stock.peRatio }}</strong><br/>
-
 
 
 <br/><br/>

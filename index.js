@@ -15,7 +15,8 @@ app.use(bodyParser.urlencoded({extended :false}));
 // API KEY pk_2e8af6c4ffc14edca46fc4b1d6d1de67
 // Create API call function
 function call_api(finishedAPI, ticker) {
-	request('https://cloud.iexapis.com/stable/stock/' + ticker + '/quote?token=pk_2e8af6c4ffc14edca46fc4b1d6d1de67', {json: true}, (err, res, body) => {
+	//request('https://cloud.iexapis.com/stable/stock/' + ticker + '/quote?token=pk_2e8af6c4ffc14edca46fc4b1d6d1de67', {json: true}, (err, res, body) => {
+	request('https://cloud.iexapis.com/stable/stock/' + ticker + '/stats/stat?token=pk_2e8af6c4ffc14edca46fc4b1d6d1de67', {json: true}, (err, res, body) => {
 	if (err) {return console.log(err);}
 	if (res.statusCode === 200){
 		//console.log(body);
